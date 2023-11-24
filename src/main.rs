@@ -1,9 +1,9 @@
-use std::{env, process::exit};
 use chip8::emulator::Chip8;
-use std::io;
 use macroquad::prelude::*;
+use std::io;
+use std::{env, process::exit};
 
- fn conf() -> Conf {
+fn conf() -> Conf {
     Conf {
         window_title: String::from("Chip8 Emulator"),
         window_width: 64 * 24,
@@ -15,17 +15,15 @@ use macroquad::prelude::*;
 
 #[macroquad::main(conf)]
 async fn main() {
-    let args : Vec<String> = env::args().collect();
+    let args: Vec<String> = env::args().collect();
 
     if args.len() < 2 {
         eprintln!("ROM file not specified in the arguements");
         exit(1);
     }
 
-
     let mut e = Chip8::new();
     let res = e.load_from_file(&args[1]);
-
 
     if let Err(e) = res {
         match e.kind() {
@@ -40,8 +38,8 @@ async fn main() {
     }
 
     loop {
-        println!("Framerate : {}",get_fps());
-        e.run(); 
+        println!("Framerate : {}", get_fps());
+        e.run();
         next_frame().await;
     }
 }
