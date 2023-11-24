@@ -9,8 +9,8 @@ on:
     ## - release
 
 env:
-  BIN_NAME: bfoot
-  PROJECT_NAME: bumblefoot
+  BIN_NAME: chip8
+  PROJECT_NAME: chip8
   REPO_NAME: spectralops/rust-ci-release-template
   BREW_TAP: jondot/homebrew-tap
 
