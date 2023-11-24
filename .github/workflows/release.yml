@@ -11,7 +11,7 @@ on:
 env:
   BIN_NAME: chip8
   PROJECT_NAME: chip8
-  REPO_NAME: spectralops/rust-ci-release-template
+  REPO_NAME: catinpajama/chip8-emulator
   BREW_TAP: jondot/homebrew-tap
 
 jobs:
