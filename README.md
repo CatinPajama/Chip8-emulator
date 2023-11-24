@@ -1,14 +1,14 @@
 # Chip8 Emulator 
 
-## How to Use
+## Usage 
 ```
 cargo run -- filepath/rom
-// or
+# or
 cargo build --release
 ./chip8 filename/rom
 ```
 
 ## TODO
-- [] Limit Framerate
-- [] Fix minor opcode bugs
-- [] Add audio
+- [ ] Limit Framerate
+- [ ] Fix minor opcode bugs
+- [ ] Add audio
